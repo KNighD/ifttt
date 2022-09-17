@@ -1,5 +1,5 @@
 # 订阅 https://nitter.net/i/lists/1552112375448231938/rss 并存到私人仓库 issue 中
-name: update-twitter-rss-issue
+name: create-twitter-daily-issue
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 6.0.2
       - name: Prepare
         run: pnpm install
       - name: Create twitter daily issues
