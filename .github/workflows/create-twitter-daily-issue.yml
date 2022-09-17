@@ -1,0 +1,23 @@
+# 订阅 https://nitter.net/i/lists/1552112375448231938/rss 并存到私人仓库 issue 中
+name: update-twitter-rss-issue
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  push:
+    branches:
+      - main
+jobs:
+  create-twitter-daily-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Prepare
+        run: pnpm install
+      - name: Create twitter daily issues
+        run: node scripts/create-twitter-daily-issues.js
+        env:
+          MY_GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
+

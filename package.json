@@ -1,0 +1,27 @@
+{
+  "name": "ifttt",
+  "version": "1.0.0",
+  "description": "个人工作流",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KNighD/ifttt.git"
+  },
+  "keywords": [
+    "ifttt"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KNighD/ifttt/issues"
+  },
+  "homepage": "https://github.com/KNighD/ifttt#readme",
+  "dependencies": {
+    "dayjs": "^1.11.5",
+    "octokit": "^2.0.7",
+    "rss-parser": "^3.12.0"
+  }
+}
