@@ -33,7 +33,7 @@ const getLatestIssueNumber = async () => {
     owner: 'OWNER',
     repo: 'REPO'
   })
-  return data.shift().issue_number
+  return data.shift().number
 }
 
 // 发布到 issue comment
