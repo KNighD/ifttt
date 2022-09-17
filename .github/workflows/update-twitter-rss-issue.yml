@@ -19,8 +19,8 @@ jobs:
           version: 6.0.2
       - name: Prepare
         run: pnpm install
-      - name: Update twitter rss issues
-        run: node scripts/update-twitter-rss-issues.js
+      - name: Update twitter rss issue
+        run: node scripts/update-twitter-rss-issue.js
         env:
           MY_GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
 
