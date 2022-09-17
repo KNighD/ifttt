@@ -20,7 +20,7 @@ jobs:
       - name: Prepare
         run: pnpm install
       - name: Create twitter daily issues
-        run: node scripts/create-twitter-daily-issues.js
+        run: node scripts/create-twitter-daily-issue.js
         env:
           MY_GITHUB_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
 

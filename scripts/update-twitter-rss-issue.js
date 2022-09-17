@@ -7,7 +7,7 @@ const octokit = new Octokit({
   auth: process.env.MY_GITHUB_TOKEN
 });
 
-const RSS_REPO = `/KNighD/rss-box`
+const RSS_REPO = `KNighD/rss-box`
 
 // 获取推文 id
 const getTId = (link) => {
